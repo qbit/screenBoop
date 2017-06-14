@@ -1,16 +1,15 @@
 use <MCAD/boxes.scad>
 
-mainBox=[2.5, 4.5, .6];
+mainBox=[26, 13, .6];
 
-translate([0,0,.3]) {
 difference() {
-    roundedBox(mainBox, .4, true);
-    translate([0,0,.4]) {
-        roundedBox([2.0, 4.0, 4.5] , .4, true);
-        roundedBox([2.3, 4.3, .6] , .4, true);
+    roundedBox(mainBox, 4, true);
+    roundedBox([23, 10, 45] , 2, true);
+    translate([0,0,.2]) {
+        roundedBox([24, 11, .6] , 2, true);
     }
 }
-}
-translate([2.5,0,0]) {
-    cylinder(.1,1.15,1.15);
+translate([20,0,-0.3]) {
+    cylinder(.6, 3,2.5);
+    cylinder(.4,5.5,5.5);
 }
